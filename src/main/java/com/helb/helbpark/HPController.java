@@ -87,22 +87,23 @@ public class HPController implements Initializable {
         timeline = new Timeline(new KeyFrame(Duration.seconds(Integer.parseInt(tabVehicleData[0])),event -> {
 
             Vehicle vehicle;
+            FactoryVehicle factoryVehicle = FactoryVehicle.getInstance();
 
             if (tabVehicleData.length == 3)//security
             {
                 if (tabVehicleData[1].equals("voiture"))
                 {
-                    vehicle = new Car(tabVehicleData[2]);
+                    vehicle = factoryVehicle.createVehicle("car",tabVehicleData[2]);
                     addVehicle(vehicle);
                 }
                 else if (tabVehicleData[1].equals("moto"))
                 {
-                    vehicle = new Bike(tabVehicleData[2]);
+                    vehicle = factoryVehicle.createVehicle("bike",tabVehicleData[2]);
                     addVehicle(vehicle);
                 }
                 else if (tabVehicleData[1].equals("camionette"))
                 {
-                    vehicle = new Van(tabVehicleData[2]);
+                    vehicle = factoryVehicle.createVehicle("van",tabVehicleData[2]);
                     addVehicle(vehicle);
                 }
                 else

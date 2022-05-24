@@ -27,7 +27,7 @@ public class ParkingView
         if (parking.isParkingFree())
             state.setText("Status : Libre");
         else
-            state.setText("Status : Occupé");
+            state.setText("Status : Occupe");
 
 
         HBox hBoxType = new HBox(10);
@@ -46,13 +46,13 @@ public class ParkingView
         Button btnEditPlate = new Button("Editer");
         btnEditPlate.setOnAction(event -> {
             String updatePlate = editPlateView();
-            if(updatePlate!=null)
+            if(updatePlate!=null && updatePlate!="")
                 parking.setPlateNumber(updatePlate);
         });
         hBoxPlate.getChildren().addAll(plateNumber,btnEditPlate);
 
-        Label totalPayment = new Label("Total à payer : "+ parking.getTotalToPay() +" €");
-        Button releaseParking = new Button("Libérer l'emplacement");
+        Label totalPayment = new Label("Total a payer : "+ parking.getTotalToPay() +" €");
+        Button releaseParking = new Button("Liberer l'emplacement");
         releaseParking.setOnAction(event -> {
             //generation de code promo + reçu
             CinemaReduction cinemaReduction = new CinemaReduction(parking.getVehicleType());
