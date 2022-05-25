@@ -76,7 +76,7 @@ public abstract class ReceiptGenerator
 
         //--------------enregistrement du reçu dans un dossier et fichier-------
 
-        String PATH = "ticket_archive\\";
+        String PATH = "ticket_archive/";
         String directoryPath = PATH.concat(directoryName);
         String filePath = fileName+".txt";
 
