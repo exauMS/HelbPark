@@ -32,9 +32,9 @@ public abstract class Payment
         // exception mercredi reduction de 25% pour vehicule avec plaque contenant "p"
         else if(dayOfWeek==Calendar.WEDNESDAY)
         {
-            if (plateNumber.contains("p"))
+            if (plateNumber.contains("P"))
             {
-                int percentage = 25;
+                double percentage = 25;
                 setStrategy(new StrategyPercentagePrice(vehicleType, percentage));
             }
 
