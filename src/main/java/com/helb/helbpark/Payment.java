@@ -7,7 +7,6 @@ import java.util.GregorianCalendar;
 public abstract class Payment
 {
     private static PaymentStrategy strategy;
-    private static int price;
     private  static GregorianCalendar calendar = new GregorianCalendar();
     private static int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
     private static int actualDay = calendar.get(Calendar.DAY_OF_MONTH);
