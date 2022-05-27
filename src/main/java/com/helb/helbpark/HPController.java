@@ -29,7 +29,6 @@ import java.util.*;
 public class HPController implements Initializable {
 
     @FXML
-    private final int GRID_CASES_NUMBER=20;
     private final int GRID_CASE_HEIGHT=60;
     private final int GRID_CASE_WIDTH=112;
 
@@ -41,7 +40,7 @@ public class HPController implements Initializable {
     private ArrayList<Parking> parkingList = new ArrayList<>();
     private List<String> fileExtensionsList;
     private File vehiclesDataFile;
-   private Timeline timeline, dateTimeline;
+   private Timeline timeline;
     private boolean exit=false;
 
 
@@ -59,7 +58,7 @@ public class HPController implements Initializable {
     {
         initializeGrid();
         initializeParkings();
-        //realTimeClock();
+        realTimeClock();
 
     }
 
@@ -89,7 +88,7 @@ public class HPController implements Initializable {
             Vehicle vehicle;
             FactoryVehicle factoryVehicle = FactoryVehicle.getInstance();
 
-            if (tabVehicleData.length == 3)//security
+            if (tabVehicleData.length == 3)//security 3 donnees a recevoir
             {
                 if (tabVehicleData[1].equals("voiture"))
                 {
@@ -227,14 +226,11 @@ public class HPController implements Initializable {
 
     public void realTimeClock()
     {
-        dateTimeline =  timeline = new Timeline(new KeyFrame(Duration.seconds(1),event -> {
+
             Date d = Calendar.getInstance().getTime();
             DateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
             String today = simpleDateFormat.format(d);
             date.setText(today);
-        }));
-        timeline.setCycleCount(-1);
-        timeline.play();
 
     }
 

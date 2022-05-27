@@ -12,7 +12,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
 
 public class ParkingView
 {
@@ -70,7 +69,6 @@ public class ParkingView
         window.showAndWait();
 
 
-        //return parking;
     }
 
     private static String editPlateView()
