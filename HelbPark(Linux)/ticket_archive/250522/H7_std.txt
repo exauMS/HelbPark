@@ -1,0 +1,12 @@
+-------------------------------
+Date : 25-05-2022
+Place occupee : 0
+Type de vehicule : bike
+Immatriculation : H7
+Prix de base : 10 €
+Reduction : reduction du mercredi
+Total a payer : 10 €
+Code promo cinema : o2r9t3d7
+Type de ticket : standard(10 %)
+Aucun jeu pour le ticket Standard
+-------------------------------
